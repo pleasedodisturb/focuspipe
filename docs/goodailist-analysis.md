@@ -12,8 +12,8 @@ These will immediately improve your daily workflow with minimal setup.
 
 ### OpenClaw — Personal AI Assistant
 - **GitHub:** https://github.com/openclaw/openclaw
-- **Stars:** ~214,000+
-- **What it does:** Local-first personal AI agent that connects to 50+ messaging platforms (WhatsApp, Telegram, Slack, Signal, iMessage, Discord). Runs on your machine, remembers context across conversations, browses the web, fills forms, runs shell commands, and autonomously writes new skills to extend itself. Now a non-profit backed by a full-time team.
+- **Stars:** ~386,500
+- **What it does:** Local-first personal AI agent that connects to 50+ messaging platforms (WhatsApp, Telegram, Slack, Signal, iMessage, Discord). Runs on your machine, remembers context across conversations, browses the web, fills forms, runs shell commands, and autonomously writes new skills to extend itself. Now an independent foundation (creator joined OpenAI). Runs on anything from Raspberry Pi to VPS.
 - **Why it's relevant:** This is the "always-on AI layer" you need. It bridges Claude Code's power to your daily messaging — ask questions from your phone via Telegram, have it monitor things, extract data from sites. The self-extending skill system means it gets smarter as you use it. No subscription — bring your own API key.
 - **Integration effort:** Weekend project. Docker install, configure messaging integrations, point at your Anthropic API key.
 - **Concerns:** 20GB+ storage for full features. CPU usage ~5-10%. API costs for Claude calls. Community is massive but fast-moving — breaking changes possible.
@@ -78,33 +78,54 @@ Not ready for immediate integration, but track these.
 - **Why it matters:** Designed ground-up for ADHD instead of bolting ADHD features onto a neurotypical tool. The emoji motivation system and dopamine-loop design are research-backed approaches to ADHD productivity.
 - **Watch because:** You already use Linear + TickTick. Adding a third PM tool increases cognitive load. But if Linear's structure isn't working for your ADHD, Leantime's approach is worth evaluating. Could also inspire focuspipe's UI/UX.
 
+### Dorothy — Claude Code Orchestrator
+- **GitHub:** https://github.com/Charlie85270/Dorothy
+- **Stars:** ~338 (small but purpose-built)
+- **What it does:** Desktop app to orchestrate multiple AI CLI agents (Claude Code, Codex, etc.) simultaneously with Kanban management, cron scheduling, and GitHub triggers. The only tool specifically designed to run multiple Claude Code instances in parallel.
+- **Why it matters:** You already live in Claude Code. Dorothy lets you run parallel agents across focuspipe, hawker, and CareerOS without manually managing tmux sessions. Cron scheduling for recurring tasks (daily job scans, marketplace checks).
+- **Watch because:** Only 338 stars — tiny community. But the concept is exactly right for your workflow. Worth trying as a weekend experiment.
+
 ### Hermes Agent — Self-Improving Agent Framework
 - **GitHub:** https://github.com/NousResearch/hermes-agent
-- **Stars:** Growing rapidly
-- **What it does:** Open-source, self-improving agentic framework from Nous Research. Runs capable multi-step agents on your own infrastructure. Designed for developers who want autonomous agents that get better over time.
-- **Why it matters:** The self-improvement loop is interesting for focuspipe — an agent that learns your ADHD patterns and adapts its interventions. Integrates with Screenpipe.
-- **Watch because:** Still early. Nous Research is credible but the framework is evolving fast.
+- **Stars:** ~231,700 (0 to 231k in 6 months — fastest-growing framework of 2026)
+- **What it does:** Self-improving agentic framework from Nous Research with a GEPA learning loop. Runs on your own infrastructure, works reliably with 30B+ local models. Most-used agent on OpenRouter. NVIDIA partnership for DGX Spark integration.
+- **Why it matters:** The self-improvement loop is compelling for focuspipe — an agent that learns your ADHD patterns and adapts its interventions. Integrates with Screenpipe. The local model support means you could run ADHD monitoring without API costs.
+- **Watch because:** Massive growth but the framework is still evolving. Best for when you want to move beyond Claude API to local model agents.
 
 ### Browser Use — AI Browser Automation
 - **GitHub:** https://github.com/browser-use/browser-use
-- **Stars:** ~60,000+
+- **Stars:** ~107,000
 - **What it does:** Makes websites accessible for AI agents. Gives LLMs the ability to interact with web pages — clicking, typing, navigating, extracting data — using natural language instructions.
 - **Why it matters:** Natural upgrade path for hawker. Instead of scraping HTML, you tell an agent "go to eBay, search for X, extract all listings under $50." More resilient than DOM-based scraping.
 - **Watch because:** High CPU/memory usage for browser sessions. Playwright (which you already use) covers most of your needs. But the natural language control layer is compelling for complex marketplace interactions.
 
 ### Docling — Document Intelligence
 - **GitHub:** https://github.com/docling-project/docling
-- **Stars:** ~20,000+
+- **Stars:** ~61,000
 - **What it does:** IBM's document parsing library. Converts PDFs, DOCX, PPTX, images, and more to structured markdown or JSON. Advanced table recognition, OCR, and layout analysis.
 - **Why it matters:** CareerOS needs to parse job descriptions from PDFs, company reports, etc. hawker might need to process product specs. Docling handles the messy document-to-structured-data pipeline.
 - **Watch because:** Works well now but the model downloads are large. Evaluate when you actually need document parsing at scale.
 
 ### Marker — PDF to Markdown
 - **GitHub:** https://github.com/VikParuchuri/marker
-- **Stars:** ~20,000+
+- **Stars:** ~33,000
 - **What it does:** Converts PDFs to clean markdown with high accuracy. Handles complex layouts, tables, and figures. Local processing, no cloud dependency.
 - **Why it matters:** Cleaner PDF processing for CareerOS resume/job description handling. Pairs with Claude Code for analysis.
 - **Watch because:** Overlaps with Docling. Pick one when you need it.
+
+### Odysseus — Self-Hosted AI Workspace
+- **GitHub:** https://github.com/odysseus-ai/odysseus
+- **Stars:** ~85,500 (0 to 85k in under 3 months — launched May 2026)
+- **What it does:** Self-hosted AI workspace for chat, agents, tools, research, model serving, email, and calendar. Local-first, no telemetry by default. MCP support. AGPL-3.0 licensed.
+- **Why it matters:** All-in-one local AI hub that could consolidate multiple tools. The email/calendar integration is interesting for CareerOS interview scheduling.
+- **Watch because:** Extremely new (May 2026). Growing fast but needs to stabilize. The AGPL license is more restrictive if you want to build on top of it commercially.
+
+### Bumblebee — MCP Supply Chain Scanner
+- **GitHub:** https://github.com/nichochar/bumblebee
+- **Stars:** ~4,900
+- **What it does:** Read-only supply chain scanner from Perplexity AI. Checks your dependencies, MCP servers, and editor extensions for suspicious packages. Scans lockfiles without ever executing package code.
+- **Why it matters:** You run multiple MCP servers and Claude Code extensions. Bumblebee audits your MCP config files for supply chain risks — a security hygiene tool that takes 30 seconds to run.
+- **Watch because:** Small but from Perplexity AI. As MCP adoption grows (17k+ public servers), supply chain attacks on MCP configs become a real threat. Run it periodically.
 
 ### i-have-adhd — ADHD-Friendly AI Output Skill
 - **GitHub:** https://github.com/topics/adhd (search "i-have-adhd")
@@ -194,10 +215,10 @@ Popular repos that are NOT relevant to your setup.
 | **LangChain** | 110k+ | Foundational agent framework but over-abstracted for your use case. Claude Code + direct API calls is simpler and more maintainable. |
 | **LangFlow** | 146k | Visual agent builder. You write code in Claude Code — a visual builder adds a layer you don't need. |
 | **Dify** | 136k | Same as LangFlow — impressive platform but you're not building visual AI apps. |
-| **AutoGen (Microsoft)** | 50k+ | Multi-agent orchestration framework. Useful at enterprise scale, overkill for solo developer. Claude Code's workflow system covers this. |
+| **AutoGen (Microsoft)** | 60k | In maintenance mode — Microsoft merged it into Microsoft Agent Framework. Do not start new projects with it. |
 | **MetaGPT** | 50k+ | Multi-agent software company simulation. Research project energy, not production tool. |
 | **MLflow** | 20k+ | ML lifecycle management for training pipelines. You use pre-trained models via API. |
-| **Flowise** | 51k | Another visual builder. Same skip reason as LangFlow/Dify. |
+| **Flowise** | 55k | **Archived August 13, 2026.** Code frozen, no security patches. Dead project. |
 | **SillyTavern** | 15k+ | LLM roleplay frontend. Not your use case. |
 | **CrewAI** | 30k+ | Multi-agent framework. You already have Claude Code's agent orchestration. Adding another framework increases complexity without clear benefit. |
 | **Leon AI** | 15k+ | Personal assistant. OpenClaw is the better choice — larger community, more integrations, more active development. |
