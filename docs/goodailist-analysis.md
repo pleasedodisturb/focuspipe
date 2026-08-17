@@ -16,7 +16,15 @@ These will immediately improve your daily workflow with minimal setup.
 - **What it does:** Local-first personal AI agent that connects to 50+ messaging platforms (WhatsApp, Telegram, Slack, Signal, iMessage, Discord). Runs on your machine, remembers context across conversations, browses the web, fills forms, runs shell commands, and autonomously writes new skills to extend itself. Now an independent foundation (creator joined OpenAI). Runs on anything from Raspberry Pi to VPS.
 - **Why it's relevant:** This is the "always-on AI layer" you need. It bridges Claude Code's power to your daily messaging — ask questions from your phone via Telegram, have it monitor things, extract data from sites. The self-extending skill system means it gets smarter as you use it. No subscription — bring your own API key.
 - **Integration effort:** Weekend project. Docker install, configure messaging integrations, point at your Anthropic API key.
-- **Concerns:** 20GB+ storage for full features. CPU usage ~5-10%. API costs for Claude calls. Community is massive but fast-moving — breaking changes possible.
+- **Concerns:** API costs for Claude calls. Community is massive but fast-moving — breaking changes possible.
+
+### Super Productivity — ADHD Task Manager
+- **GitHub:** https://github.com/johannesjo/super-productivity
+- **Stars:** ~18,000+
+- **What it does:** Open-source time tracker and task manager with built-in ADHD support: CBT techniques, Pomodoro timer, timeboxing, and break reminders. Syncs with Jira, GitHub, GitLab, Redmine, and OpenProject. Works offline, available on all platforms.
+- **Why it's relevant:** TickTick handles your task management but doesn't have ADHD-specific features. Super Productivity's Pomodoro + CBT integration is designed to work with your brain, not against it. The GitHub sync means your dev tasks automatically appear. Could replace TickTick or complement it for focus sessions.
+- **Integration effort:** Drop-in. Desktop app install, configure sync with GitHub/Linear.
+- **Concerns:** Feature-rich but the UI can feel busy. Start with just the Pomodoro + timeboxing features and expand from there.
 
 ### career-ops — AI Job Search Pipeline
 - **GitHub:** https://github.com/santifer/career-ops
@@ -133,6 +141,20 @@ Not ready for immediate integration, but track these.
 - **Why it matters:** Could be integrated as a Claude Code skill for focuspipe or your personal setup. When you're in a low-focus state, your AI interactions should adapt.
 - **Watch because:** New project, needs to prove its approach. But the concept directly maps to focuspipe's mission.
 
+### Actual Budget — Local-First Finance
+- **GitHub:** https://github.com/actualbudget/actual
+- **Stars:** ~28,200
+- **What it does:** Privacy-focused envelope budgeting app. Self-hosted, works offline, syncs across devices. Clean UI with bank sync support. The most mature open-source YNAB alternative.
+- **Why it matters:** You use YNAB. Actual Budget is the self-hosted, privacy-respecting alternative with envelope budgeting. If YNAB's cloud dependency bothers you or if the subscription price isn't worth it, this is the migration path.
+- **Watch because:** Migration from YNAB takes effort. Only worth switching if privacy or cost matters enough. The feature set is 90% there.
+
+### Zed — GPU-Accelerated Code Editor
+- **GitHub:** https://github.com/zed-industries/zed
+- **Stars:** ~88,600
+- **What it does:** Rust-based code editor with GPU-accelerated rendering, near-zero input latency, built-in AI assistant, and real-time collaboration. Designed for speed above everything.
+- **Why it matters:** For ADHD, latency kills focus. Zed's sub-millisecond responsiveness prevents the micro-frustrations that trigger context switches. The built-in AI assistant complements Claude Code for quick inline edits.
+- **Watch because:** You use Ghostty + tmux + Claude Code CLI. Adding Zed would mean changing your editor workflow. But if you ever want a GUI editor that doesn't fight your attention, this is the one. macOS native.
+
 ---
 
 ## 3. Building Blocks for Your Projects
@@ -157,6 +179,8 @@ Not ready for immediate integration, but track these.
 | **Mem0** | Track pricing trends, buyer patterns, seasonal demand. Persistent marketplace intelligence. | github.com/mem0ai/mem0 |
 | **n8n** | Automate the full pipeline: scrape → evaluate → list → track → notify. | github.com/n8n-io/n8n |
 | **LiteLLM** | Unified proxy for switching between LLMs based on task — cheap models for listing descriptions, Claude for pricing strategy. | github.com/BerriAI/litellm |
+
+> **Note:** No dominant open-source marketplace automation tool exists yet. Small projects like eBay Listing Generator offer photo-to-listing pipelines but are early-stage. This is a genuine gap — hawker could become the tool others are looking for. Consider open-sourcing it.
 
 ### For CareerOS (Job Search)
 
